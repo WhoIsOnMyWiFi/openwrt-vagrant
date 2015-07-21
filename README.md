@@ -25,7 +25,7 @@ make menuconfig
 make
 ```
 
-At this point, it is safe to destroy the virtual machine because the final images will be left in openwrt/bin/<arch>/openwrt-<firmware-info>.bin
+At this point, it is safe to destroy the virtual machine because the final images will be left in openwrt/bin/*arch*/openwrt-*firmware-info*.bin
 ```
 vagrant destroy
 ```
