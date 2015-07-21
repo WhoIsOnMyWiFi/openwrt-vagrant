@@ -5,24 +5,29 @@ Note
 ----
 If you are using an older version of Vagrant (such as 1.4.3, which is the version in the Ubuntu 14.07 repos), you will need to explicitly retrieve the ubuntu/trusty64 box by running
 ```
-# be sure to use the URL for the current version of the base box
 vagrant box add ubuntu/trusty64 https://vagrantcloud.com/ubuntu/trusty64/version/20150609.0.10/provider/virtualbox.box
 ```
+Be sure to use the URL for the current version of the base box.
 
 Usage
 -----
+From the host machine, run:
 ```
-# from the host machine, run:
 vagrant up
 vagrant ssh
-# now inside the virtual machine, you will probably want to run:
+```
+
+Now inside the virtual machine, you will probably want to run:
+```
 cd /vagrant/openwrt
 make clean
 make menuconfig
 make
-# at this point, it is safe to destroy the virtual machine because...
+```
+
+At this point, it is safe to destroy the virtual machine because the final images will be left in openwrt/bin/<arch>/openwrt-<firmware-info>.bin
+```
 vagrant destroy
-# the final images will be left in openwrt/bin/<arch>/openwrt-<firmware-info>.bin
 ```
 
 Bugs
