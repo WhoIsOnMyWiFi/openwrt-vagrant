@@ -20,12 +20,12 @@ vagrant ssh
 Now inside the virtual machine, you will probably want to run:
 ```
 cd /vagrant/openwrt
-make clean
 make menuconfig
 make
+cp -r bin /vagrant/openwrt-binaries-$(date +%s)
 ```
 
-At this point, it is safe to destroy the virtual machine because the final images will be left in openwrt/bin/*arch*/openwrt-*firmware-info*.bin
+At this point, it is safe to destroy the virtual machine because the final images will be left in openwrt-binaries-*unix time*/*arch*/openwrt-*firmware-info*.bin
 ```
 vagrant destroy
 ```
